@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { QueryClientProviders } from "@/components/QueryClientProviders";
 import ReduxProvider from "@/store/ReduxProvider";
 import DynamicSiteHead from "@/components/layout/user/dynamic-site-head";
-import ChatbotWindow from "@/components/chatbot/ChatbotWindow";
 import { getBackendUrl } from "@/lib/backend-url";
 
 const geistSans = Geist({
@@ -81,7 +80,6 @@ export default function RootLayout({
           </QueryClientProviders>
         </ReduxProvider>
         <Toaster position="top-center" richColors />
-        <ChatbotWindow />
       </body>
     </html>
   );

@@ -1,17 +1,39 @@
 import asyncio
-import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import payment,analitics
 from starlette.middleware.sessions import SessionMiddleware
 
-from app.routers import product, brand, auth, category,banner,wishlist,cart,discount,coupon,qr,order,system,upload,shipping,review,refund,customer,dashboard,faq,policy,contact,about
+from app.routers import (
+    about,
+    analitics,
+    auth,
+    banner,
+    brand,
+    cart,
+    category,
+    contact,
+    coupon,
+    customer,
+    dashboard,
+    discount,
+    faq,
+    order,
+    payment,
+    policy,
+    product,
+    qr,
+    refund,
+    review,
+    shipping,
+    system,
+    upload,
+    wishlist,
+)
 from app.core.config import settings
 from app.worker import app_rocketry
 from app.middleware.guest import GuestMiddleware
-from app.core.config import settings
 
 
 # --- LIFESPAN: QUẢN LÝ VÒNG ĐỜI APP ---
